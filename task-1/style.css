@@ -94,7 +94,7 @@ a{
         gap: 10px;
     }
 }
-
+/* mobile */
 @media (max-width: 480px){
     header{
         flex-direction: column;
