@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CSS Modal Popup</h1>
+
+    <!-- :target method -->
+     <a href="#modal" class="btn">Open Modal (Target)</a>
+    
+     <!-- :checked method -->
+      <input type="checkbox" name="modal-checkbox" id="modal-checkbox" class="hidden-checkbox">
+      <label for="modal-checkbox" class="btn">Open Modal (Checkbox)</label>
+
+      <!-- modal -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-btn">&times;</a>
+            <h2>Modal Popup</h2>
+            <p>This is a modal using pure CSS.</p>
+        </div>
+    </div>
+
+    <div class="modal modal-checkbox">
+        <div class="modal-content">
+            <label for="modal-checkbox" class="close-btn">&times;</label>
+            <h2>Checkbox Modal</h2>
+            <p>This modal uses the checkbox hack.</p>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
