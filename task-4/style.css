@@ -13,13 +13,10 @@ h1{
 nav{
     padding: 10px;
     background-color: blue;
-  
-    
+    position: relative;    
 }
 
-ul li {
-    padding: 10px;
-}
+
 
 .menu {
     display: flex;
@@ -28,9 +25,21 @@ ul li {
     justify-content: center;
 }
 
-a{
+.menu li{
+    padding: 10px;
+    position: relative;
+}
+
+.menu a{
     text-decoration: none;
     color: white;
+    display: block;
+    padding: 10px;
+}
+
+.menu li:hover{
+    background-color: rgba(15, 15, 154, 0.959);
+    border-radius: 5px;
 }
 
 .sub-menu{
@@ -41,7 +50,9 @@ a{
     position: absolute;
     background-color: blue;
     min-width: 190px;
-    padding: 0;
+    left: 0;
+    top: 100%;
+    border-radius: 5px;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     box-shadow: 10px 10px 10px rgb(30, 3, 110);
     transform: translateY(10px);
@@ -52,21 +63,64 @@ a{
     border-bottom: 1px solid black;
 }
 
-.menu li:hover .sub-menu, .menu li:focus-within .sub-menu{
+.sub-menu li:last-child{
+    border-bottom: none;
+}
+
+.menu li:hover .sub-menu{
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-ul li:hover{
-    background-color: rgba(15, 15, 154, 0.959);
+#menu-toggle{
+    display: none;
+}
+
+.hamburger{
+    color: white;
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+    padding: 10px;
 }
 
 @media (max-width:768px){
+    .hamburger{
+        display: block;
+    }
     .menu{
         flex-direction: column;
         align-items: center;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        text-align: center;
+        transition: opacity 0.3s ease-in, max-height 0.3s ease-in;
     }
+
+    .menu li{
+        width: 100%;
+    }
+
+    .sub-menu{
+        position: static;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.3s ease-in, max-height 0.3s ease-in;
+    }
+
+    .menu li:hover .sub-menu, .menu li:focus-within .sub-menu{
+        opacity: 1;
+        max-height: 170px;
+    }
+    #menu-toggle:checked ~ .menu{
+        opacity: 1;
+        max-height: 900px;
+    }
+
+
 
     
 }
