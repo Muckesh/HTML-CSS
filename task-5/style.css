@@ -5,6 +5,9 @@
     font-family: sans-serif;
 }
 
+input[type="checkbox"]{
+    display: none;
+}
 body {
     text-align: center;
     padding: 50px;
@@ -68,15 +71,11 @@ body {
     transform: scale(1);
 }
 
-.hidden-checkbox {
-    display: none;
-}
-
-.hidden-checkbox:checked ~ .modal-checkbox {
+#modal-checkbox:checked ~ .modal-checkbox{
     opacity: 1;
     visibility: visible;
 }
 
-.hidden-checkbox:checked ~ .modal-checkbox .modal-content {
+#modal-checkbox:checked ~ .modal-checkbox .modal-content{
     transform: scale(1);
 }
