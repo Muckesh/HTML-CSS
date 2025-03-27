@@ -1,55 +1,76 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 50px;
-}
-
-input[type="radio"] {
+input[type="radio"]{
     display: none;
 }
-
-.tab-labels {
+body{
+    text-align: center;
+}
+h2,p{
+    color: white;
+}
+.tab-labels{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
-    margin-bottom: 20px;
+    padding: 20px;
 }
 
-.tab-labels label {
+.tab-labels label{
     padding: 10px 20px;
-    cursor: pointer;
-    background-color: lightgray;
+    background-color: rgba(164, 212, 240, 0.774);
+    color: white;
     border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
 
-.tab-labels label:hover {
-    background-color: gray;
-    color: white;
+.tab-labels label:hover{
+    background-color: rgb(57, 174, 242);
 }
 
-.tab-content {
+.tab-content{
     position: relative;
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.content {
-    display: none;
-    padding: 20px;
-    background-color: #f0f0f0;
+.content{
+    position: absolute;
+    background-color: rgb(57, 174, 242);
+    padding: 10px;
+    margin: 10px;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     opacity: 0;
-    transform: translateY(10px);
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-#tab1:checked ~ .tab-content .content-1,
-#tab2:checked ~ .tab-content .content-2,
-#tab3:checked ~ .tab-content .content-3 {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
+#tab-1:checked ~ .tab-labels .label-1{
+    background-color: rgb(57, 174, 242);
 }
+
+#tab-1:checked ~ .tab-content #content-1{
+    opacity: 1;
+    visibility: visible;
+}
+
+#tab-2:checked ~ .tab-labels .label-2{
+    background-color: rgb(57, 174, 242);
+}
+
+#tab-2:checked ~ .tab-content #content-2{
+    opacity: 1;
+    visibility: visible;
+}
+
+#tab-3:checked ~ .tab-labels .label-3{
+    background-color: rgb(57, 174, 242);
+}
+
+#tab-3:checked ~ .tab-content #content-3{
+    opacity: 1;
+    visibility: visible;
+}
+
+
