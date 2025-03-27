@@ -1,0 +1,64 @@
+input[type="radio"]{
+    display: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.carousel{
+    position: relative;
+    display: flex;
+    height: 60%;
+    width: 50%;
+    overflow: hidden;
+}
+
+.slides{
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.nav-dots{
+    display: flex;
+    position: absolute;
+    gap: 10px;
+    bottom: 10px;
+    left: 50%;
+}
+
+.nav-dots label{
+    height: 12px;
+    width: 12px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.nav-dots label:hover{
+    background-color: white;
+}
+
+#slide-1:checked ~ .slides{transform: translateX(0%);}
+#slide-1:checked ~ .nav-dots .slide-1{background-color: white;}
+#slide-2:checked ~ .slides{transform: translateX(-100%);}
+#slide-2:checked ~ .nav-dots .slide-2{background-color: white;}
+#slide-3:checked ~ .slides{transform: translateX(-200%);}
+#slide-3:checked ~ .nav-dots .slide-3{background-color: white;}
+
