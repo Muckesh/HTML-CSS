@@ -1,95 +1,101 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    height: 100vh;
+body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #f4f4f4;
+    height: 100vh;
 }
 
-.container {
+.grid-container{
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 150px 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "header header"
         "sidebar main"
-        "footer footer";
-    width: 90%;
-    max-width: 1200px;
-    height: 90vh;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        "footer footer"
+    ;
+    width: 100%;
+    height: 100vh;
+    
 }
 
-header {
+header{
     grid-area: header;
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
+    width: 100vw;
     position: sticky;
     top: 0;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
     z-index: 10;
 }
 
-aside {
+.sidebar{
     grid-area: sidebar;
-    background: #444;
+    background-color: gray;
     color: white;
     padding: 20px;
 }
 
-main {
+.contents{
     grid-area: main;
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.hero {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    color: white;
+
+.hero{
     padding: 50px;
+    color: white;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
     text-align: center;
     font-size: 1.5rem;
     position: relative;
-    top: -30px; /* Creates overlapping effect */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    top: -30px;
 }
 
-.content {
-    background: #ddd;
+.main-content{
+    background-color: aliceblue;
     padding: 20px;
     flex-grow: 1;
 }
 
-footer {
-    grid-area: footer;
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 15px;
+.sub-content{
+    background-color: #feb47b;
+    padding: 20px;
+    flex-grow: 1;
 }
 
-@media (max-width: 768px) {
-    .container {
+footer{
+    grid-area: footer;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    color: white;
+}
+
+@media (max-width:768px){
+    .grid-container{
         grid-template-columns: 1fr;
-        grid-template-areas:
-            "header"
-            "main"
-            "sidebar"
-            "footer";
+        grid-template-areas: 
+        "header"
+        "main"
+        "sidebar"
+        "footer"
+        ;
     }
 
-    aside {
+    .sidebar{
         text-align: center;
     }
 }
