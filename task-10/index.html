@@ -3,66 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 10</title>
+    <title>Task 10 - Multi-Page Simulator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <nav>
-            <div class="logo">
-                <h2>Simulator</h2>
-            </div>
-
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">☰</label>
-
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about-us">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="header-container">
+            <input type="checkbox" id="toggle" class="toggle-checkbox">
+            <label for="toggle" class="hamburger">
+                <span class="hamburger-icon">&#9776;</span>
+            </label>
+            <nav class="navigation">
+                <ul class="menu">
+                    <li><a href="#home" class="menu-link">Home</a></li>
+                    <li><a href="#about-us" class="menu-link">About Us</a></li>
+                    <li><a href="#services" class="menu-link">Services</a></li>
+                    <li><a href="#contact" class="menu-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+        </div>
     </header>
 
-    <main>
+    <main class="main-content">
         <section id="home" class="page">
-            <h1>Welcome to Our Simulator</h1>
-            <p>This is a multi-page experience using only CSS.</p>
-            <div class="card">This is a sample card.</div>
-        </section>
+            <div class="page-container">
+                <h1 class="page-title">Home</h1>
+                <p class="page-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut aperiam et voluptatibus velit quo iure deleniti explicabo sint, delectus mollitia ipsa aliquid cumque nostrum blanditiis obcaecati pariatur harum unde consequuntur.</p>
 
-        <section id="about-us" class="page">
-            <h1>About Us</h1>
-            <p>We create web experiences using pure CSS.</p>
-        </section>
-
-        <section id="services" class="page">
-            <h1>Our Services</h1>
-            <div class="services-grid">
-                <div class="card">Service 1</div>
-                <div class="card">Service 2</div>
-                <div class="card">Service 3</div>
-                <div class="card">Service 4</div>
-                <div class="card">Service 5</div>
-                <div class="card">Service 6</div>
+                <!-- grid layout -->
+                 <div class="grid-container">
+                    <div class="grid-item featured">
+                        <h3>Featured Section</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, dolore.</p>
+                        <button class="btn">Learn More</button>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Card 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, dolore.</p>
+                        <button class="btn">Learn More</button>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Card 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, dolore.</p>
+                        <button class="btn">Learn More</button>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Card 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, dolore.</p>
+                        <button class="btn">Learn More</button>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Card 4</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, dolore.</p>
+                        <button class="btn">Learn More</button>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Card 5</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, dolore.</p>
+                        <button class="btn">Learn More</button>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Card 6</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, dolore.</p>
+                        <button class="btn">Learn More</button>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Card 7</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, dolore.</p>
+                        <button class="btn">Learn More</button>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Card 8</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, dolore.</p>
+                        <button class="btn">Learn More</button>
+                    </div>
+                 </div>
             </div>
         </section>
-
+        <section id="home" class="page">
+            <div class="page-container">
+                <h1 class="page-title">Home</h1>
+                <p class="page-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut aperiam et voluptatibus velit quo iure deleniti explicabo sint, delectus mollitia ipsa aliquid cumque nostrum blanditiis obcaecati pariatur harum unde consequuntur.</p>
+            </div>
+        </section>
+        <section id="about-us" class="page">
+            <div class="page-container">
+                <h1 class="page-title">About Us</h1>
+                <p class="page-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut aperiam et voluptatibus velit quo iure deleniti explicabo sint, delectus mollitia ipsa aliquid cumque nostrum blanditiis obcaecati pariatur harum unde consequuntur.</p>
+            </div>
+        </section>
+        <section id="services" class="page">
+            <div class="page-container">
+                <h1 class="page-title">Services</h1>
+                <p class="page-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut aperiam et voluptatibus velit quo iure deleniti explicabo sint, delectus mollitia ipsa aliquid cumque nostrum blanditiis obcaecati pariatur harum unde consequuntur.</p>
+            </div>
+        </section>
         <section id="contact" class="page">
-            <h1>Contact Us</h1>
-            <div class="contact-grid">
-                <div class="icon">📞 Phone</div>
-                <div class="icon">📧 Email</div>
-                <div class="icon">📍 Location</div>
+            <div class="page-container">
+                <h1 class="page-title">Contact</h1>
+                <p class="page-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut aperiam et voluptatibus velit quo iure deleniti explicabo sint, delectus mollitia ipsa aliquid cumque nostrum blanditiis obcaecati pariatur harum unde consequuntur.</p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>© 2025 Multi-Page CSS Simulator</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="copyright">&copy; 2025 Multi Page Website Simulator</p>
+        </div>
     </footer>
-
 </body>
 </html>
